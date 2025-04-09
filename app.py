@@ -32,7 +32,7 @@ def extract_text_from_pdf(pdf_file):
 # Function to call Groq API
 def call_groq_api(prompt, model="llama3-70b-8192"):
     # Use the API key from session state instead of hardcoded value
-    client = Groq(api_key=st.session_state.groq_api_key)
+    client = Groq(api_key="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")
     
     try:
         chat_completion = client.chat.completions.create(
