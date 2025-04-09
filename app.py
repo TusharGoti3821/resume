@@ -142,7 +142,7 @@ def resume_qa(resume_text, question):
     return call_groq_api(prompt)
 
 # Main UI
-st.title("Euron Recruitment Agent")
+st.title("Tushar Recruitment Agent")
 st.markdown("Smart Resume Analysis & Interview Preparation System")
 
 # Sidebar for configuration
@@ -160,7 +160,7 @@ with st.sidebar:
     
     st.markdown("---")
     
-    st.write("🚀 Euron Recruitment Agent")
+    st.write("🚀 Tushar Recruitment Agent")
     st.write("v1.0.0")
 
 # Check if API key is provided
