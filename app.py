@@ -7,7 +7,7 @@ import json
 from groq import Groq
 
 # Set page configuration
-st.set_page_config(page_title="Tushar Recruitment Agent", layout="wide")
+st.set_page_config(page_title="Euron Recruitment Agent", layout="wide")
 
 # Initialize session state variables if they don't exist
 if 'resume_text' not in st.session_state:
@@ -30,8 +30,9 @@ def extract_text_from_pdf(pdf_file):
     return text
 
 # Function to call Groq API
-def call_groq_api(prompt, model="llama-3.3-70b-versatile"):
-    client = Groq(api_key="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")
+def call_groq_api(prompt, model="llama3-70b-8192"):
+    # Use the API key from session state instead of hardcoded value
+    client = Groq(api_key=st.session_state.groq_api_key)
     
     try:
         chat_completion = client.chat.completions.create(
@@ -142,7 +143,7 @@ def resume_qa(resume_text, question):
     return call_groq_api(prompt)
 
 # Main UI
-st.title("Tushar Recruitment Agent")
+st.title("Euron Recruitment Agent")
 st.markdown("Smart Resume Analysis & Interview Preparation System")
 
 # Sidebar for configuration
@@ -160,7 +161,7 @@ with st.sidebar:
     
     st.markdown("---")
     
-    st.write("🚀 Tushar Recruitment Agent")
+    st.write("🚀 Euron Recruitment Agent")
     st.write("v1.0.0")
 
 # Check if API key is provided
