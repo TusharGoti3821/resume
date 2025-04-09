@@ -7,7 +7,7 @@ import json
 from groq import Groq
 
 # Set page configuration
-st.set_page_config(page_title="Euron Recruitment Agent", layout="wide")
+st.set_page_config(page_title="Tushar Recruitment Agent", layout="wide")
 
 # Initialize session state variables if they don't exist
 if 'resume_text' not in st.session_state:
