@@ -7,7 +7,7 @@ import json
 from groq import Groq
 
 # Set page configuration
-st.set_page_config(page_title="Euron Recruitment Agent", layout="wide")
+st.set_page_config(page_title="Tushar Recruitment Agent", layout="wide")
 
 # Initialize session state variables if they don't exist
 if 'resume_text' not in st.session_state:
@@ -143,7 +143,7 @@ def resume_qa(resume_text, question):
     return call_groq_api(prompt)
 
 # Main UI
-st.title("Euron Recruitment Agent")
+st.title("Tushar Recruitment Agent")
 st.markdown("Smart Resume Analysis & Interview Preparation System")
 
 # Sidebar for configuration
@@ -161,7 +161,7 @@ with st.sidebar:
     
     st.markdown("---")
     
-    st.write("🚀 Euron Recruitment Agent")
+    st.write("🚀 Tushar Recruitment Agent")
     st.write("v1.0.0")
 
 # Check if API key is provided
