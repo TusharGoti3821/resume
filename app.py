@@ -31,7 +31,7 @@ def extract_text_from_pdf(pdf_file):
 
 # Function to call Groq API
 def call_groq_api(prompt, model="llama3-70b-8192"):
-    client = Groq(api_key="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")
+    client = Groq(api_key="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")
     
     try:
         chat_completion = client.chat.completions.create(
